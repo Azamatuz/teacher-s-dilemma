@@ -1,0 +1,6 @@
+import axelrod as axl
+
+p1, p2 = axl.TitForTat(), axl.Defector()
+for turn in range(10):
+    p1.play(p2)
+print(p1.history, p2.history)
