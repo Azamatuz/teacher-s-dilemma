@@ -1,6 +1,10 @@
-import axelrod as axl
+import numpy as np
+import pandas as pd
+columns=['A', 'B', 'C', 'D']
+temp_input = []
+df_zero = pd.DataFrame(index=columns,columns=columns)
+df_zero[:] = 'C, D'
+df_zero.A = 'D, D'
+print(df_zero)
 
-p1, p2 = axl.TitForTat(), axl.Defector()
-for turn in range(10):
-    p1.play(p2)
-print(p1.history, p2.history)
+print(df_zero.groupby('C').count())

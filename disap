@@ -1,0 +1,93 @@
+def disap(t_one, t_two, index, index_two):
+    temp_list = []
+    if t_one == 'disap':
+        if index <= 1:
+            if t_two == 'coop':
+                temp_list.append('C, C')
+            if t_two == 'defect':
+                temp_list.append('C, D')
+            if t_two == 'tit_one':
+                if index == 0:
+                    temp_list.append('C, C')
+                else:
+                    if result_list[index - 1][index_two][0] == 'D':
+                        temp_list.append('C, D')
+                    else:
+                        temp_list.append('C, C')
+            if t_two == 'tit0':
+                if index == 0:
+                    temp_list.append('C, D')
+                else:
+                    if result_list[index - 1][index_two][0] == 'D':
+                        temp_list.append('C, D')
+                    else:
+                        temp_list.append('C, C')
+            if t_two == 'disap':
+                if index < 1:
+                    temp_list.append('C, C')
+                else:
+                    if result_list[index - 1][index_two][0] == 'D' and result_list[index - 2][index_two][0] == 'D':
+                        temp_list.append('C, D')
+                    else:
+                        temp_list.append('C, C')
+        else:
+            if result_list[index - 1][index_two][0] == 'D' and result_list[index - 2][index_two][0] == 'D':
+                if t_two == 'coop':
+                    temp_list.append('D, C')
+                if t_two == 'defect':
+                    temp_list.append('D, D')
+                if t_two == 'tit_one':
+                    if index == 0:
+                        temp_list.append('D, C')
+                    else:
+                        if result_list[index - 1][index_two][0] == 'D':
+                            temp_list.append('D, D')
+                        else:
+                            temp_list.append('D, C')
+                if t_two == 'tit0':
+                    if index == 0:
+                        temp_list.append('D, D')
+                    else:
+                        if result_list[index - 1][index_two][0] == 'D':
+                            temp_list.append('D, D')
+                        else:
+                            temp_list.append('D, C')
+
+                if t_two == 'disap':
+                    if index <= 1:
+                        temp_list.append('C, D')
+                    else:
+                        if result_list[index - 1][index_two][0] == 'D' and result_list[index - 2][index_two][0] == 'D':
+                            print(i)
+                            temp_list.append('D, D')
+                        else:
+                            temp_list.append('D, C')
+            else:
+                if t_two == 'coop':
+                    temp_list.append('C, C')
+                if t_two == 'defect':
+                    temp_list.append('C, D')
+                if t_two == 'tit_one':
+                    if index == 0:
+                        temp_list.append('C, C')
+                    else:
+                        if result_list[index - 1][index_two][0] == 'D':
+                            temp_list.append('C, D')
+                        else:
+                            temp_list.append('C, C')
+                if t_two == 'tit0':
+                    if index == 0:
+                        temp_list.append('C, D')
+                    else:
+                        if result_list[index - 1][index_two][0] == 'D':
+                            temp_list.append('C, D')
+                        else:
+                            temp_list.append('C, C')
+                if t_two == 'disap':
+                    if index <= 1:
+                        temp_list.append('C, C')
+                    else:
+                        if result_list[index - 1][index_two][0] == 'D' and result_list[index - 2][index_two][0] == 'D':
+                            temp_list.append('C, D')
+                        else:
+                            temp_list.append('C, C')
