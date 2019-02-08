@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="96f53ab4-a0e8-4731-9c7e-f5195f263bed" name="Default Changelist" comment="five players are done. need to be tested">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Aigerim.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/df_version.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/df_version_v2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/disap" afterDir="false" />
+    <list default="true" id="96f53ab4-a0e8-4731-9c7e-f5195f263bed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/list_match.py" beforeDir="false" afterPath="$PROJECT_DIR$/list_match.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test" beforeDir="false" afterPath="$PROJECT_DIR$/test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/df_version_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/df_version_v2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,21 +32,22 @@
           <entry key="project.open.time.49" value="1" />
           <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.58" value="1" />
+          <entry key="project.open.time.59" value="1" />
           <entry key="project.open.time.73" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IPNB" value="1" />
           <entry key="Profiler Session" value="1" />
-          <entry key="Python" value="10" />
+          <entry key="Python" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="50" />
-          <entry key="Python" value="5492" />
+          <entry key="Python" value="5664" />
         </counts>
       </usages-collector>
     </session>
@@ -103,11 +99,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/df_version.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="649" lean-forward="true" selection-start-line="617" selection-end-line="649" />
+            <state relative-caret-position="11016">
+              <caret line="649" selection-start-line="617" selection-end-line="649" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <element signature="e#564#32202#0" />
               </folding>
             </state>
           </provider>
@@ -116,11 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
+            <state relative-caret-position="85">
               <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -128,11 +120,37 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/df_version_v2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            <state relative-caret-position="90">
+              <caret line="284" column="33" selection-start-line="284" selection-start-column="33" selection-end-line="284" selection-end-column="33" />
               <folding>
-                <element signature="e#3280#6525#0" />
-                <element signature="e#6601#12932#0" />
+                <element signature="e#657#3458#0" />
+                <element signature="e#703#874#0" />
+                <element signature="e#936#1106#0" />
+                <element signature="e#1169#1893#0" />
+                <element signature="e#1956#3218#0" />
+                <element signature="e#3529#7010#0" />
+                <element signature="e#5446#6778#0" />
+                <element signature="e#7021#7188#0" />
+                <element signature="e#7258#7424#0" />
+                <element signature="e#7495#8878#0" />
+                <element signature="e#8949#10312#0" />
+                <element signature="e#10405#10580#0" />
+                <element signature="e#10650#10824#0" />
+                <element signature="e#10895#12304#0" />
+                <element signature="e#12375#13185#0" />
+                <element signature="e#13744#13910#0" />
+                <element signature="e#13981#15364#0" />
+                <element signature="e#15435#16798#0" />
+                <element signature="e#16891#17066#0" />
+                <element signature="e#17136#17310#0" />
+                <element signature="e#17381#18792#0" />
+                <element signature="e#18863#19675#0" />
+                <element signature="e#18945#19116#0" />
+                <element signature="e#19928#20104#0" />
+                <element signature="e#20174#20349#0" />
+                <element signature="e#20420#21179#0" />
+                <element signature="e#21250#22577#0" />
+                <element signature="e#23992#25319#0" />
               </folding>
             </state>
           </provider>
@@ -209,6 +227,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -220,7 +239,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -274,6 +292,9 @@
       <module name="teacher's dilemma" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -416,14 +437,20 @@
       <option name="project" value="LOCAL" />
       <updated>1548016167579</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="five players are done. need to be tested">
+      <created>1549562955128</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1549562955129</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09001513" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.090771556" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -443,9 +470,9 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" sideWeight="0.86351705" visible="true" weight="0.24583964" />
+      <window_info anchor="right" id="SciView" order="3" sideWeight="0.8585366" visible="true" weight="0.16187595" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" x="0" y="0" width="295" height="544" id="Documentation" order="5" sideWeight="0.13793103" side_tool="true" weight="0.3343419" />
+      <window_info anchor="right" x="0" y="0" width="295" height="544" id="Documentation" order="5" sideWeight="0.14146341" side_tool="true" visible="true" weight="0.16187595" />
       <window_info anchor="right" id="Coverage" order="6" side_tool="true" />
     </layout>
   </component>
@@ -468,17 +495,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Untitled.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tournament.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Untitled.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
         </state>
       </provider>
     </entry>
@@ -511,32 +538,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/df_version.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="649" lean-forward="true" selection-start-line="617" selection-end-line="649" />
+        <state relative-caret-position="11016">
+          <caret line="649" selection-start-line="617" selection-end-line="649" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#564#32202#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
+        <state relative-caret-position="85">
           <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/df_version_v2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        <state relative-caret-position="90">
+          <caret line="284" column="33" selection-start-line="284" selection-start-column="33" selection-end-line="284" selection-end-column="33" />
           <folding>
-            <element signature="e#3280#6525#0" />
-            <element signature="e#6601#12932#0" />
+            <element signature="e#657#3458#0" />
+            <element signature="e#703#874#0" />
+            <element signature="e#936#1106#0" />
+            <element signature="e#1169#1893#0" />
+            <element signature="e#1956#3218#0" />
+            <element signature="e#3529#7010#0" />
+            <element signature="e#5446#6778#0" />
+            <element signature="e#7021#7188#0" />
+            <element signature="e#7258#7424#0" />
+            <element signature="e#7495#8878#0" />
+            <element signature="e#8949#10312#0" />
+            <element signature="e#10405#10580#0" />
+            <element signature="e#10650#10824#0" />
+            <element signature="e#10895#12304#0" />
+            <element signature="e#12375#13185#0" />
+            <element signature="e#13744#13910#0" />
+            <element signature="e#13981#15364#0" />
+            <element signature="e#15435#16798#0" />
+            <element signature="e#16891#17066#0" />
+            <element signature="e#17136#17310#0" />
+            <element signature="e#17381#18792#0" />
+            <element signature="e#18863#19675#0" />
+            <element signature="e#18945#19116#0" />
+            <element signature="e#19928#20104#0" />
+            <element signature="e#20174#20349#0" />
+            <element signature="e#20420#21179#0" />
+            <element signature="e#21250#22577#0" />
+            <element signature="e#23992#25319#0" />
           </folding>
         </state>
       </provider>

@@ -2,8 +2,8 @@ import pandas as pd
 from random import shuffle
 
 
-teachers = ['coop', 'def', 'tit1', 'tit0']*25
-shuffle(teachers)
+teachers = ['coop', 'def', 'tit1', 'tit0', 'disap']
+# shuffle(teachers)
 df = pd.DataFrame(columns=teachers, index=teachers)
 # df = pd.DataFrame(columns=shuffle_list, index=shuffle_list)
 df[:] = 'empty'
@@ -11,9 +11,12 @@ coop_status = 'C'
 def_status = 'D'
 tit1_status = 'C'
 tit0_status = 'C'
+disap_status = 'C'
 
 for i in range(len(teachers)):
     for j in range(len(teachers)):
+        if df.iloc[i - 2][j][0] == 'D' and df.iloc[i - 1][j][0] == 'D':
+            disap_status = 'D'
 
         if i == j:
             df.iloc[i][j] = '0, 0'
@@ -53,6 +56,10 @@ for i in range(len(teachers)):
                     else:
                         df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=coop_status,
                                                                             status_two=tit0_status)
+                if df.index[j] == 'disap':
+                    df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=coop_status,
+                                                                        status_two=disap_status)
+
             # def
             if df.columns[i] == 'def':
                 if df.index[j] == 'coop':
@@ -97,6 +104,9 @@ for i in range(len(teachers)):
                         else:
                             df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=def_status,
                                                                                 status_two=tit0_status)
+                if df.index[j] == 'disap':
+                    df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=def_status,
+                                                                        status_two=disap_status)
             # tit1
             if df.columns[i] == 'tit1':
                 if df.iloc[i][j - 1][-1] == 'D' or df.iloc[i][j - 1][0] == '0' and df.iloc[i][j - 2][-1] == 'D':
@@ -142,6 +152,9 @@ for i in range(len(teachers)):
                             else:
                                 df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one='D',
                                                                                     status_two=tit0_status)
+                    if df.index[j] == 'disap':
+                        df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one='D',
+                                                                            status_two=disap_status)
                 else:
                     if df.index[j] == 'coop':
                         df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=tit1_status,
@@ -177,6 +190,9 @@ for i in range(len(teachers)):
                         else:
                             df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=tit1_status,
                                                                                 status_two=tit0_status)
+                    if df.index[j] == 'disap':
+                        df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=tit1_status,
+                                                                            status_two=disap_status)
             # tit0
             if df.columns[i] == 'tit0':
                 if j == 0 or j == 1 and df.iloc[i][j - 1][-1] == '0' \
@@ -223,6 +239,9 @@ for i in range(len(teachers)):
                             else:
                                 df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one='D',
                                                                                     status_two=tit0_status)
+                    if df.index[j] == 'disap':
+                        df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one='D',
+                                                                            status_two=disap_status)
                 else:
                     if df.index[j] == 'coop':
                         df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=tit0_status,
@@ -258,8 +277,89 @@ for i in range(len(teachers)):
                         else:
                             df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=tit0_status,
                                                                                 status_two=tit0_status)
+                    if df.index[j] == 'disap':
+                        df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=tit0_status,
+                                                                            status_two=disap_status)
+            # disap
+            if df.columns[i] == 'disap':
+                disap_status = 'C'
+                if df.iloc[i][j - 2][-1] == 'D' and df.iloc[i][j - 1][-1] == 'D':
+                    disap_status = 'D'
+                    if df.index[j] == 'coop':
+                        df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=disap_status,
+                                                                            status_two=coop_status)
+                    if df.index[j] == 'def':
+                        df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=disap_status,
+                                                                            status_two=def_status)
+                    if df.index[j] == 'tit1':
+                        if df.iloc[i-1][j][-1] == '0' and df.iloc[i - 2][j][0] == 'D':
+                            df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=disap_status,
+                                                                                status_two='D')
+                        if df.iloc[i - 1][j][0] == 'D':
+                            df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=disap_status,
+                                                                                status_two='D')
+                        else:
+                            df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=disap_status,
+                                                                                status_two=tit1_status)
+                    if df.index[j] == 'tit0':
+                        if i == 0 or i == 1 and df.iloc[i-1][j][0] == '0':
+                            df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=disap_status,
+                                                                                status_two='D')
+                        elif df.iloc[i - 1][j][0] == '0':
+                            if df.iloc[i - 2][j][0] == 'D':
+                                df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=disap_status,
+                                                                                    status_two='D')
+                            else:
+                                df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=disap_status,
+                                                                                    status_two=tit0_status)
+                        elif df.iloc[i - 1][j][0] == 'D':
+                            df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=disap_status,
+                                                                                status_two='D')
+                        else:
+                            df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=disap_status,
+                                                                                status_two=tit0_status)
+                    if df.index[j] == 'disap':
+                        df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=disap_status,
+                                                                            status_two=disap_status)
+                else:
+                    if df.index[j] == 'coop':
+                        df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=disap_status,
+                                                                            status_two=coop_status)
+                    if df.index[j] == 'def':
+                        df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=disap_status,
+                                                                            status_two=def_status)
+                    if df.index[j] == 'tit1':
+                        if df.iloc[i-1][j][-1] == '0' and df.iloc[i - 2][j][0] == 'D':
+                            df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=disap_status,
+                                                                                status_two='D')
+                        if df.iloc[i - 1][j][0] == 'D':
+                            df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=disap_status,
+                                                                                status_two='D')
+                        else:
+                            df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=disap_status,
+                                                                                status_two=tit1_status)
+                    if df.index[j] == 'tit0':
+                        if i == 0 or i == 1 and df.iloc[i-1][j][0] == '0':
+                            df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=disap_status,
+                                                                                status_two='D')
+                        elif df.iloc[i - 1][j][0] == '0':
+                            if df.iloc[i - 2][j][0] == 'D':
+                                df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=disap_status,
+                                                                                    status_two='D')
+                            else:
+                                df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=disap_status,
+                                                                                    status_two=tit0_status)
+                        elif df.iloc[i - 1][j][0] == 'D':
+                            df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=disap_status,
+                                                                                status_two='D')
+                        else:
+                            df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=disap_status,
+                                                                                status_two=tit0_status)
+                    if df.index[j] == 'disap':
+                        df.iloc[i][j] = '{status_one}, {status_two}'.format(status_one=disap_status,
+                                                                            status_two=disap_status)
 
-
+print(df)
 # df.to_csv('df.csv')
 df_payoff = df
 for i in range(len(teachers)):
